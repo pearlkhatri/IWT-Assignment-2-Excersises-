@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2D Square Layout</title>
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+  }
+</style>
+</head>
+<body>
+
+<h2>2D Square Layout</h2>
+<p>Enter number of rows and columns:</p>
+<form id="sizeForm">
+  Rows: <input type="number" id="rowsInput" min="1" required>
+  Columns: <input type="number" id="colsInput" min="1" required>
+  <button type="submit">Create Layout</button>
+</form>
+
+<table id="layoutTable"></table>
+
+<script>
+  // Function to create the 2D square layout
+  function createLayout(rows, cols) {
+    var table = document.getElementById("layoutTable");
+    table.innerHTML = ""; // Clear previous content
+    
+    // Loop to create rows
+    for (var i = 0; i < rows; i++) {
+      var row = table.insertRow();
+      
+      // Loop to create cells in each row
+      for (var j = 0; j < cols; j++) {
+        var cell = row.insertCell();
+        
+        // Set background color based on row and column index
+        if ((i + j) % 2 === 0) {
+          cell.style.backgroundColor = "black";
+        } else {
+          cell.style.backgroundColor = "red";
+        }
+      }
+    }
+  }
+
+  // Event listener for form submission
+  document.getElementById("sizeForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    
+    // Get values of rows and columns from input fields
+    var rows = parseInt(document.getElementById("rowsInput").value);
+    var cols = parseInt(document.getElementById("colsInput").value);
+    
+    // Call createLayout function with user input
+    createLayout(rows, cols);
+  });
+</script>
+
+</body>
+</html>

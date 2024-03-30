@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Animation</title>
+<style>
+  #text {
+    font-size: 1pt; /* Initial font size */
+    color: red; /* Initial color */
+  }
+</style>
+</head>
+<body>
+
+<p id="text">TEXT-GROWING</p>
+
+<script>
+  var textElement = document.getElementById("text");
+  var fontSize = 1; // Initial font size
+  var growing = true; // Boolean to track if text is growing or shrinking
+
+  // Function to update text size and color
+  function updateText() {
+    // If text is growing
+    if (growing) {
+      fontSize++; // Increase font size
+      textElement.style.fontSize = fontSize + "pt"; // Set font size
+      // Change to blue color and display "TEXT-SHRINKING" when font size reaches 50pt
+      if (fontSize === 50) {
+        textElement.innerText = "TEXT-SHRINKING";
+        textElement.style.color = "blue";
+        growing = false; // Change to shrinking mode
+      }
+    } else { // If text is shrinking
+      fontSize--; // Decrease font size
+      textElement.style.fontSize = fontSize + "pt"; // Set font size
+      // Change to red color when font size reaches 5pt
+      if (fontSize === 5) {
+        textElement.style.color = "red";
+        growing = true; // Change to growing mode
+      }
+    }
+  }
+
+  // Call the updateText function in an interval of 100ms
+  setInterval(updateText, 100);
+</script>
+
+</body>
+</html>

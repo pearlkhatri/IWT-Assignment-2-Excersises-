@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Template</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      border-bottom: 2px solid #fff;
+    }
+    .container {
+      padding: 20px;
+    }
+    .column {
+      float: left;
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .column:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+    .column:nth-child(even) {
+      background-color: #e6e6e6;
+    }
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Header</h1>
+</header>
+
+<div class="container clearfix">
+  <div class="column">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, magna ut dignissim aliquam, ligula tortor posuere ex, a interdum lectus eros eu lectus.</p>
+  </div>
+  <div class="column">
+    <p>Integer luctus est et sem lobortis, nec suscipit odio sagittis. Mauris nec convallis ipsum, et aliquam magna. Phasellus nec tincidunt neque, sit amet consequat nisi.</p>
+  </div>
+</div>
+
+</body>
+</html>

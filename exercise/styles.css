@@ -1,0 +1,35 @@
+/* styles.css */
+
+/* Background color and image with gradient overlay */
+body {
+    background-color: #f0f0f0; /* fallback color */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background.jpg'); /* gradient overlay with image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* h1 heading */
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff; /* color according to background */
+  }
+  
+  /* Paragraphs */
+  p {
+    font-size: 15px;
+    color: #ffffff; /* color according to background */
+    line-height: 1.5; /* increase line spacing */
+  }
+  
+  /* Highlight important words */
+  strong {
+    color: #ffcc00; /* styling for important words */
+  }
+  
+  /* h2 heading */
+  h2 {
+    font-size: 20px;
+    color: #ffffff; /* color according to background */
+  }
+  

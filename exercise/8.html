@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    /* Style for the image grid */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    /* Style for images */
+    .image-grid img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-grid">
+    <img src="images/1.jpg" alt="Image 1" >
+    <img src="images/4.jpg" alt="Image 2" >
+    <img src="images/3.jpg" alt="Image 3" >
+    <img src="images/7.jpg" alt="Image 4" >
+    <img src="images/8.jpg" alt="Image 5" >
+    <img src="images/6.jpg" alt="Image 6" >
+    <img src="images/2.jpg" alt="Image 7" >
+    <img src="images/5.jpg" alt="Image 8" >
+    <img src="images/9.jpg" alt="Image 9" >
+  </div>
+
+  <script>
+    function openImage(imageUrl) {
+      window.open(imageUrl, '_blank');
+    }
+  </script>
+</body>
+</html>

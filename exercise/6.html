@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Chapter</title>
+  <style>
+    /* Styling for smooth scrolling effect */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Styling for active links */
+    .active {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chapter 1: Introduction to HTML</h1>
+  
+  <ol>
+    <li><a href="#topic1">What is HTML?</a></li>
+    <li><a href="#topic2">Basic Structure of HTML Document</a></li>
+    <li><a href="#topic3">HTML Elements and Tags</a></li>
+    <li><a href="#topic4">Creating Links in HTML</a></li>
+    <li><a href="#topic5">HTML Lists</a></li>
+  </ol>
+  
+  <hr>
+  
+  <div id="topic1">
+    <h2>1. What is HTML?</h2>
+    <p>HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages and web applications.</p>
+  </div>
+  
+  <div id="topic2">
+    <h2>2. Basic Structure of HTML Document</h2>
+    <p>An HTML document consists of several elements including <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code>.</p>
+  </div>
+  
+  <div id="topic3">
+    <h2>3. HTML Elements and Tags</h2>
+    <p>HTML elements are represented by tags. Tags are enclosed in angle brackets, like &lt;tagname&gt;.</p>
+  </div>
+  
+  <div id="topic4">
+    <h2>4. Creating Links in HTML</h2>
+    <p>Links in HTML are created using the anchor tag (<code>&lt;a&gt;</code>). Example: <code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></p>
+  </div>
+  
+  <div id="topic5">
+    <h2>5. HTML Lists</h2>
+    <p>HTML supports three types of lists: ordered lists, unordered lists, and definition lists.</p>
+  </div>
+  
+  <!-- Add more topics and paragraphs as needed -->
+  
+  <script>
+    // Add active class to the clicked link
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', function() {
+        links.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
